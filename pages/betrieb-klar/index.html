@@ -6,45 +6,38 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Betrieb Klar – gewachsene Betriebe ruhig darstellen</title>
+    <title>Schreinerei Beispiel – Betrieb Klar</title>
     <meta
       name="description"
-      content="Beispielseite für die Klasse Betrieb Klar: mehrere Leistungsbereiche, Beispiele und Kontakt – für gewachsene Betriebe."
+      content="Beispielseite für die Klasse Betrieb Klar: eine ruhige, strukturierte Webseite für eine Schreinerei mit mehreren Leistungsbereichen und Projekten."
     />
 
-    <!-- BRANCHE WÄHLEN -->
-    <!-- Dienstleistung: -->
-    <link rel="stylesheet" href="../../Styles/base-dienstleistung.css" />
-    <!-- Handwerk:
+    <!-- BRANCHEN-THEME: HANDWERK -->
     <link rel="stylesheet" href="../../Styles/base-handwerk.css" />
-    -->
-    <!-- Landwirtschaft:
-    <link rel="stylesheet" href="../../Styles/base-landwirtschaft.css" />
-    -->
   </head>
 
   <body class="betrieb-klar-page" data-price-tier="betrieb-klar">
     <a href="#hauptinhalt" class="skip-link">Direkt zum Inhalt</a>
 
     <div class="page-shell">
+      <!-- HEADER -->
       <header class="site-header">
         <div class="container site-header__inner">
-          <a href="../../clear4-landing-page.html" class="brand">
-            <div class="brand__mark"></div>
+          <a href="../../index.html" class="brand">
+            <div class="brand__mark" aria-hidden="true"></div>
             <div class="brand__text">
               <div class="brand__title">sichtbarkeit-wahren.ch</div>
               <div class="brand__subtitle">
-                <span data-tier-label></span> · Beispielseite
+                Schreinerei · Klasse Betrieb Klar
               </div>
             </div>
           </a>
 
           <nav class="nav" aria-label="Hauptnavigation">
             <div class="nav__primary">
-              <a href="#leistungen" class="nav__link nav__link--active"
-                >Leistungen</a
-              >
-              <a href="#projekte" class="nav__link">Beispiele</a>
+              <a href="#hero" class="nav__link nav__link--active">Start</a>
+              <a href="#leistungen" class="nav__link">Leistungen</a>
+              <a href="#projekte" class="nav__link">Projekte</a>
               <a href="#arbeitsweise" class="nav__link">Arbeitsweise</a>
               <a href="#kontakt" class="nav__link">Kontakt</a>
             </div>
@@ -52,25 +45,428 @@
         </div>
       </header>
 
+      <!-- MAIN -->
       <main id="hauptinhalt" class="site-main">
-        <!-- Hier kannst du den Inhalt aus deiner bestehenden Handwerk-490-Version
-             einfügen und etwas neutraler formulieren (für alle Branchen). -->
-        <!-- Struktur:
-             - Hero mit kurzer Beschreibung des gewachsenen Betriebs
-             - Abschnitt Leistungen (3–4 Karten)
-             - Abschnitt Beispiele/Projekte (2–4 Cards)
-             - Abschnitt Arbeitsweise (Timeline oder Liste)
-             - Kontakt + kleines Formular
-        -->
+        <!-- HERO -->
+        <section id="hero" class="section hero" aria-labelledby="hero-title">
+          <div class="container hero__inner">
+            <div>
+              <p class="hero__kicker">Schreinerei · Betrieb Klar</p>
+              <h1 id="hero-title" class="hero__title">
+                Schreinerei Beispielflur
+                <span>saubere Arbeit aus einer Hand.</span>
+              </h1>
+              <p class="hero__lead">
+                Wir planen, fertigen und montieren Schreinerarbeiten für Wohnungen,
+                Häuser und kleine Gewerbebetriebe. Von der Garderobe bis zur Küche,
+                von der Reparatur bis zum Umbau – solide, verlässlich und ruhig
+                koordiniert.
+              </p>
+
+              <div class="hero__actions">
+                <a href="#leistungen" class="btn btn--primary">
+                  Leistungen ansehen
+                </a>
+                <a href="#kontakt" class="btn btn--ghost">
+                  Direkt Kontakt aufnehmen
+                </a>
+              </div>
+
+              <p class="hero__note">
+                Diese Seite ist ein Beispiel für die Klasse „Betrieb Klar“. In einem
+                realen Projekt werden Name, Ort und Inhalte an Ihre Schreinerei
+                angepasst.
+              </p>
+            </div>
+
+            <!-- Hero-Visual: ruhiger Werkstatt-Eindruck -->
+            <aside class="hero-visual" aria-hidden="true">
+              <div class="hero-visual__wood">
+                <div class="hero-visual__grain-overlay"></div>
+                <div class="hero-visual__card-layer">
+                  <div class="hero-visual__board">
+                    <div class="hero-visual__board-title">Überblick</div>
+                    <div class="hero-visual__board-grid">
+                      <div class="hero-visual__chip">
+                        Innenausbau
+                        <small>Einbauschränke, Garderoben, Möbel</small>
+                      </div>
+                      <div class="hero-visual__chip">
+                        Küche &amp; Fronten
+                        <small>Neubau und Teilumbauten</small>
+                      </div>
+                      <div class="hero-visual__chip">
+                        Reparaturen
+                        <small>Türen, Beschläge, Anpassungen</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-visual__stat-card">
+                    <div class="hero-visual__stat-label">Betriebsform</div>
+                    <div class="hero-visual__stat-value">Familienbetrieb</div>
+                    <div class="hero-visual__stat-footnote">
+                      Direkter Kontakt, kurze Wege, verlässliche Termine – seit
+                      vielen Jahren im Einsatz für Privatkunden und kleine
+                      Unternehmen.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- LEISTUNGEN -->
+        <section
+          id="leistungen"
+          class="section"
+          aria-labelledby="leistungen-title"
+        >
+          <div class="container">
+            <header class="section__header">
+              <p class="section__eyebrow">Leistungen</p>
+              <h2 id="leistungen-title" class="section__title">
+                Schreinerarbeiten für Wohnraum, Küche und Betrieb.
+              </h2>
+              <p class="section__lead">
+                Die Schwerpunkte sind bewusst in drei Bereiche gegliedert. So sehen
+                Kundinnen und Kunden schnell, ob ihr Anliegen zu uns passt.
+              </p>
+            </header>
+
+            <div class="card-grid">
+              <article class="card">
+                <div class="card__eyebrow">Innenausbau</div>
+                <h3 class="card__title">Einbauschränke &amp; Möbel nach Mass</h3>
+                <p class="card__body">
+                  Wir planen und fertigen Einbauschränke, Garderoben und einfache
+                  Möbel, die genau in Ihren Raum passen – ohne unnötigen Aufwand,
+                  dafür mit einer sauberen Ausführung.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Einbauschränke für Schlafzimmer, Korridor und Dachschrägen
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Garderoben, Sideboards, Regale nach Mass
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Oberflächen in Holz, Lack oder Dekor, passend zum Bestand
+                  </li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <div class="card__eyebrow">Küche &amp; Fronten</div>
+                <h3 class="card__title">Neubau &amp; Teilumbau</h3>
+                <p class="card__body">
+                  Von der neuen Küche bis zur Erneuerung von Fronten und
+                  Arbeitsplatten: Wir koordinieren die Schreinerarbeiten und – nach
+                  Wunsch – auch die weiteren Handwerker.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Neue Küchenzeilen und Küchenfronten
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Anpassungen an Geräten und Grundriss
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Ruhige, praktische Lösungen statt Showküchen
+                  </li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <div class="card__eyebrow">Reparaturen</div>
+                <h3 class="card__title">Unterhalt &amp; Anpassungen</h3>
+                <p class="card__body">
+                  Nicht alles muss neu gebaut werden. Oft reicht eine Reparatur oder
+                  eine kleine Anpassung, damit Türen, Schubladen und Möbel wieder
+                  zuverlässig funktionieren.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Defekte Scharniere, Schubladenauszüge, Beschläge
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Türkürzungen, Anpassungen bei Bodenbelagswechsel
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Kleine Umbauten im laufenden Betrieb
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJEKTE -->
+        <section
+          id="projekte"
+          class="section section--tight"
+          aria-labelledby="projekte-title"
+        >
+          <div class="container">
+            <header class="section__header">
+              <p class="section__eyebrow">Projekte</p>
+              <h2 id="projekte-title" class="section__title">
+                Drei Beispiele aus der jüngeren Arbeit.
+              </h2>
+              <p class="section__lead">
+                Jedes Projekt ist anders. Die folgenden Beispiele zeigen, wie wir
+                typischerweise arbeiten – vom ersten Kontakt bis zur Übergabe.
+              </p>
+            </header>
+
+            <div class="card-grid">
+              <article class="card">
+                <div class="card__eyebrow">Wohnung</div>
+                <h3 class="card__title">Einbauschrank im Dachgeschoss</h3>
+                <p class="card__body">
+                  In einer Mansardenwohnung sollten Kleider und Stauraum Platz
+                  finden, ohne den Raum zu überladen. Wir planten einen
+                  Einbauschrank über die ganze Schräge, mit ruhigen Fronten und
+                  klarer Innenaufteilung.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Aufmass vor Ort, einfache Skizze mit Aufteilung
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Fronten in ruhiger Weiss-Optik, Griffe aus Holz
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Montage an einem Vormittag, ohne grosse Baustelle
+                  </li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <div class="card__eyebrow">Küche</div>
+                <h3 class="card__title">Teilumbau mit neuen Fronten</h3>
+                <p class="card__body">
+                  Die bestehende Küche war funktional, wirkte aber dunkel. Statt
+                  eines kompletten Neubaus entschieden wir uns gemeinsam mit der
+                  Kundschaft für neue Fronten und eine helle Arbeitsplatte.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Bestehende Korpusse weiterverwendet
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Neue Fronten und Griffe, helle Arbeitsfläche
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Kurze Ausfallzeit, Küche blieb nutzbar
+                  </li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <div class="card__eyebrow">Gewerbe</div>
+                <h3 class="card__title">Empfangstheke für Praxis</h3>
+                <p class="card__body">
+                  Für eine kleine Praxis entstand eine schlichte Empfangstheke mit
+                  Stauraum, Ablageflächen und einem ruhigen Auftritt zum Warteraum
+                  hin.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Planung in Absprache mit Praxis-Team
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Schlichte Fronten, Kabel sauber geführt
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Aufbau ausserhalb der Öffnungszeiten
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ARBEITSWEISE -->
+        <section
+          id="arbeitsweise"
+          class="section section--tight"
+          aria-labelledby="arbeitsweise-title"
+        >
+          <div class="container split-layout">
+            <div>
+              <header class="section__header">
+                <p class="section__eyebrow">Arbeitsweise</p>
+                <h2 id="arbeitsweise-title" class="section__title">
+                  In wenigen Schritten von der Idee zum fertigen Stück.
+                </h2>
+                <p class="section__lead">
+                  Wir arbeiten gerne klar und vorausschaubar. Das beginnt bei der
+                  ersten Besprechung und zieht sich bis zur Übergabe durch.
+                </p>
+              </header>
+              <p>
+                Ob Einbauschrank, Küche oder Reparatur: Wir klären zuerst, was
+                wirklich nötig ist und wo wir sinnvoll ansetzen können. Oft zeigt sich
+                dabei, dass es auch einfache Lösungen gibt, die lange halten.
+              </p>
+            </div>
+
+            <aside class="split-layout__sidebar">
+              <ol class="steps">
+                <li class="steps__item">
+                  <div class="steps__bullet"></div>
+                  <h3>1. Kontakt &amp; erste Einschätzung</h3>
+                  <p>
+                    Sie melden sich per Telefon oder E-Mail und schildern kurz Ihr
+                    Anliegen. Wenn möglich, senden Sie uns ein Foto oder eine Skizze.
+                  </p>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__bullet"></div>
+                  <h3>2. Aufmass &amp; Offerte</h3>
+                  <p>
+                    Wir kommen vorbei, nehmen Mass und besprechen die Details. Auf
+                    dieser Basis erstellen wir eine transparente Offerte.
+                  </p>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__bullet"></div>
+                  <h3>3. Fertigung in der Werkstatt</h3>
+                  <p>
+                    Die Arbeiten werden in unserer Werkstatt vorbereitet. Sie
+                    erhalten auf Wunsch eine kurze Rückmeldung zum Stand.
+                  </p>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__bullet"></div>
+                  <h3>4. Montage &amp; Übergabe</h3>
+                  <p>
+                    Wir montieren sauber vor Ort und hinterlassen alles ordentlich.
+                    Kleinere Nachjustierungen gehören für uns selbstverständlich dazu.
+                  </p>
+                </li>
+              </ol>
+            </aside>
+          </div>
+        </section>
+
+        <!-- KONTAKT -->
+        <section id="kontakt" class="section" aria-labelledby="kontakt-title">
+          <div class="container split-layout">
+            <div>
+              <header class="section__header">
+                <p class="section__eyebrow">Kontakt</p>
+                <h2 id="kontakt-title" class="section__title">
+                  So erreichen Sie die Schreinerei Beispielflur.
+                </h2>
+                <p class="section__lead">
+                  Ein kurzer Anruf oder eine E-Mail genügt. Wir melden uns und sagen
+                  ehrlich, ob und wie wir helfen können.
+                </p>
+              </header>
+
+              <p>
+                In einem realen Projekt stehen hier die genauen Kontaktdaten der
+                Schreinerei: Adresse, Telefonnummer, E-Mail und – falls gewünscht –
+                eine einfache Wegbeschreibung.
+              </p>
+
+              <p>
+                Viele Kundinnen und Kunden sind froh, wenn gleich dabeisteht, zu
+                welchen Zeiten jemand telefonisch erreichbar ist und wie lange es
+                ungefähr dauert, bis sie eine Antwort erhalten.
+              </p>
+            </div>
+
+            <aside class="split-layout__sidebar">
+              <div class="card">
+                <h3 class="card__title">Kontaktformular (Beispiel)</h3>
+                <form class="form">
+                  <div class="field">
+                    <label class="field__label" for="name">Name</label>
+                    <input
+                      id="name"
+                      class="input"
+                      type="text"
+                      placeholder="Ihr Name"
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="kontaktweg">
+                      Wie dürfen wir Sie erreichen?
+                    </label>
+                    <input
+                      id="kontaktweg"
+                      class="input"
+                      type="text"
+                      placeholder="Telefonnummer oder E-Mail-Adresse"
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="anliegen">
+                      Worum geht es ungefähr?
+                    </label>
+                    <textarea
+                      id="anliegen"
+                      class="textarea"
+                      rows="4"
+                      placeholder="Zum Beispiel: Einbauschrank, Küchenumbau, Reparatur …"
+                    ></textarea>
+                    <p class="field__hint">
+                      In der echten Version geht diese Nachricht direkt an die
+                      Schreinerei. Hier dient das Formular als Beispiel für Aufbau
+                      und Umfang.
+                    </p>
+                  </div>
+
+                  <button class="btn btn--primary" type="submit">
+                    Anfrage senden (Beispiel)
+                  </button>
+                </form>
+              </div>
+            </aside>
+          </div>
+        </section>
       </main>
 
+      <!-- FOOTER -->
       <footer class="site-footer">
         <div class="container footer__inner">
           <div class="footer__group">
-            <h3 class="footer__title">Betrieb Klar</h3>
+            <h3 class="footer__title">Schreinerei Beispielflur</h3>
             <p class="footer__meta">
-              Gute Wahl für Betriebe mit mehreren Standbeinen: strukturiert,
-              aber weiterhin ruhig und gut lesbar.
+              Diese Seite zeigt, wie eine ruhige, strukturierte Darstellung für
+              einen gewachsenen Handwerksbetrieb in der Klasse „Betrieb Klar“
+              aussehen kann.
+            </p>
+          </div>
+          <div class="footer__group">
+            <h3 class="footer__title">Hinweis</h3>
+            <p class="footer__meta">
+              In einem realen Projekt werden Inhalte, Kontaktdaten und Bilder an
+              den jeweiligen Betrieb angepasst. Die ruhige Struktur bleibt
+              dieselbe.
             </p>
           </div>
         </div>
