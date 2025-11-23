@@ -1,0 +1,26 @@
+/* Styles/base-handwerk.css */
+
+@import "../clear4-base.css";
+
+/* Handwerk: warmes Holz, Messing, Werkstatt-Gefühl */
+
+:root {
+  --color-bg: #100c08;
+  --color-surface: #18120c;
+  --color-surface-soft: #21170f;
+  --color-border-subtle: rgba(255, 244, 228, 0.06);
+
+  --color-text: #f9f4ec;
+  --color-text-soft: rgba(249, 244, 236, 0.86);
+  --color-text-muted: rgba(249, 244, 236, 0.7);
+
+  --color-brand: #d09a54;             /* Messing / Werkzeugstahl warm */
+  --color-brand-soft: rgba(208, 154, 84, 0.16);
+  --color-accent: #f0c47a;            /* heller Holz-Akzent */
+  --color-accent-soft: rgba(240, 196, 122, 0.12);
+}
+
+/* Holzstruktur etwas stärker */
+body::after {
+  opacity: 0.6;
+}

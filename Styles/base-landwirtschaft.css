@@ -1,0 +1,26 @@
+/* Styles/base-landwirtschaft.css */
+
+@import "../clear4-base.css";
+
+/* Landwirtschaft / Hof: ruhiges Grün, Feld- und Hofatmosphäre */
+
+:root {
+  --color-bg: #0b1008;
+  --color-surface: #131a0d;
+  --color-surface-soft: #192410;
+  --color-border-subtle: rgba(230, 244, 220, 0.06);
+
+  --color-text: #f3f7ec;
+  --color-text-soft: rgba(243, 247, 236, 0.9);
+  --color-text-muted: rgba(243, 247, 236, 0.7);
+
+  --color-brand: #9ac15a;
+  --color-brand-soft: rgba(154, 193, 90, 0.2);
+  --color-accent: #e5da7f;
+  --color-accent-soft: rgba(229, 218, 127, 0.18);
+}
+
+/* Etwas lebendigere Hof-Textur */
+body::after {
+  opacity: 0.55;
+}

@@ -1,0 +1,27 @@
+/* Styles/base-dienstleistung.css */
+/* Ruht auf deinem bestehenden CLEAR-4-Kernlayout */
+
+@import "../clear4-base.css";
+
+/* Dienstleistung: ruhiges Blau, sachlich, klar */
+
+:root {
+  --color-bg: #070b10;
+  --color-surface: #0f151f;
+  --color-surface-soft: #151d29;
+  --color-border-subtle: rgba(221, 230, 248, 0.06);
+
+  --color-text: #edf2ff;
+  --color-text-soft: rgba(237, 242, 255, 0.9);
+  --color-text-muted: rgba(237, 242, 255, 0.7);
+
+  --color-brand: #5a9dff;
+  --color-brand-soft: rgba(90, 157, 255, 0.18);
+  --color-accent: #ffd480;
+  --color-accent-soft: rgba(255, 212, 128, 0.16);
+}
+
+/* optional: leicht glattere Textur für Bürowelt */
+body::after {
+  opacity: 0.45;
+}
