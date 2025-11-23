@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handwerk – Klar Plus (CHF 890)</title>
+    <meta
+      name="description"
+      content="Beispielseite für Handwerksbetriebe in der Preisklasse Klar Plus (CHF 890): mehrere Leistungsbereiche, Projekte, Team, Arbeitsweise, FAQ und Kontakt – ruhig, klar und langfristig nutzbar."
+    />
+
+    <!-- Basis: CLEAR-4 Core -->
+    <link rel="stylesheet" href="../clear4-base.css" />
+    <link rel="stylesheet" href="../clear4-price-890.css" />
+
+    <!-- Branchen- & Paket-spezifische Farben / Feinanpassungen -->
+    <style>
+      :root {
+        /* Handwerk – Klar Plus: etwas mehr Tiefe und Glanz */
+        --color-bg: #0c0906;
+        --color-surface: #17100a;
+        --color-surface-soft: #21160e;
+        --color-border-subtle: rgba(255, 244, 228, 0.08);
+
+        --color-text: #fbf5eb;
+        --color-text-soft: rgba(251, 245, 235, 0.88);
+        --color-text-muted: rgba(251, 245, 235, 0.7);
+
+        --color-brand: #d6a560; /* warmes Messing */
+        --color-brand-soft: rgba(214, 165, 96, 0.2);
+        --color-accent: #f4cd84; /* heller Holz-Akzent */
+        --color-accent-soft: rgba(244, 205, 132, 0.16);
+      }
+
+      body.clear4-handwerk-890::after {
+        opacity: 0.65; /* etwas markantere Holztextur */
+      }
+
+      .hero__kicker {
+        letter-spacing: 0.22em;
+      }
+
+      .leistungen-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      @media (max-width: 960px) {
+        .leistungen-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .leistungen-grid .card__title {
+        font-size: 1.05rem;
+      }
+
+      .projekt-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      @media (max-width: 1040px) {
+        .projekt-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .projekt-list {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .projekt-meta {
+        font-size: 0.82rem;
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-2);
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        margin-top: var(--space-2);
+      }
+
+      .tag {
+        font-size: 0.78rem;
+        padding: 2px 9px;
+        border-radius: 999px;
+        border: 1px solid rgba(251, 245, 235, 0.22);
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      @media (max-width: 960px) {
+        .team-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .team-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .team-card__name {
+        font-weight: 600;
+        margin-bottom: var(--space-1);
+      }
+
+      .team-card__role {
+        font-size: 0.86rem;
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-2);
+      }
+
+      .timeline {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-left: 1px solid rgba(251, 245, 235, 0.18);
+      }
+
+      .timeline__item {
+        position: relative;
+        padding-left: var(--space-5);
+        padding-bottom: var(--space-4);
+      }
+
+      .timeline__item:last-child {
+        padding-bottom: 0;
+      }
+
+      .timeline__dot {
+        position: absolute;
+        left: -5px;
+        top: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--color-accent), var(--color-brand));
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8);
+      }
+
+      .faq {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: var(--space-6);
+      }
+
+      @media (max-width: 880px) {
+        .faq {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      .faq__item + .faq__item {
+        margin-top: var(--space-3);
+      }
+
+      .faq__question {
+        font-weight: 600;
+        margin-bottom: var(--space-1);
+      }
+
+      .table--zeiten {
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body class="clear4-handwerk-890">
+    <a href="#hauptinhalt" class="skip-link">Direkt zum Inhalt</a>
+
+    <div class="page-shell">
+      <!-- HEADER -->
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a href="../index.html" class="brand" aria-label="Zur Landing Page">
+            <div class="brand__mark" aria-hidden="true"></div>
+            <div class="brand__text">
+              <div class="brand__title">sichtbarkeit-wahren.ch</div>
+              <div class="brand__subtitle">Handwerk · Klar Plus</div>
+            </div>
+          </a>
+
+          <nav class="nav" aria-label="Hauptnavigation">
+            <div class="nav__primary">
+              <a href="#leistungen" class="nav__link nav__link--active">Leistungen</a>
+              <a href="#projekte" class="nav__link">Projekte</a>
+              <a href="#team" class="nav__link">Team &amp; Geschichte</a>
+              <a href="#arbeitsweise" class="nav__link">Arbeitsweise</a>
+              <a href="#faq" class="nav__link">Fragen</a>
+              <a href="#kontakt" class="nav__link">Kontakt</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main id="hauptinhalt" class="site-main">
+        <!-- HERO -->
+        <section class="section hero" aria-labelledby="hero-title">
+          <div class="container hero__inner">
+            <div>
+              <p class="hero__kicker">Handwerk · Klar Plus · CHF 890.–</p>
+              <h1 id="hero-title" class="hero__title">
+                Handwerksbetriebe mit mehreren Standbeinen
+                <span>ruhig und vollständig darstellen.</span>
+              </h1>
+              <p class="hero__lead">
+                Diese Seite ist ein Beispiel für Handwerksbetriebe, die mehr zeigen möchten:
+                Innenausbau, Renovation, Reparaturen, vielleicht ein kleiner Showroom und ein
+                Team mit klaren Rollen. Alles in einer Struktur, die auch in vielen Jahren noch
+                verständlich ist.
+              </p>
+
+              <div class="hero__actions">
+                <a href="#leistungen" class="btn btn--primary">
+                  Aufbau & Leistungen ansehen
+                </a>
+                <a href="../index.html#preise" class="btn btn--ghost">
+                  Zur Preisübersicht
+                </a>
+              </div>
+
+              <p class="hero__note">
+                Die Inhalte sind als Muster gedacht. In einem echten Projekt werden sie
+                Schritt für Schritt durch Ihre echten Leistungen, Orte, Namen und Fotos
+                ersetzt.
+              </p>
+
+              <div class="hero__meta">
+                <span>6–8 Inhaltsabschnitte</span>
+                <span>Team & Geschichte mit drin</span>
+                <span>Gut geeignet bei mehreren Geschäftsfeldern</span>
+              </div>
+            </div>
+
+            <!-- Hero-Visual -->
+            <aside class="hero-visual" aria-hidden="true">
+              <div class="hero-visual__wood">
+                <div class="hero-visual__grain-overlay"></div>
+                <div class="hero-visual__card-layer">
+                  <div class="hero-visual__board">
+                    <div class="hero-visual__board-title">Typischer Klar Plus Betrieb</div>
+                    <div class="hero-visual__board-grid">
+                      <div class="hero-visual__chip">
+                        Innenausbau &amp; Umbau
+                        <small>Wohnungen, Häuser, kleine Firmen</small>
+                      </div>
+                      <div class="hero-visual__chip">
+                        Reparaturen &amp; Service
+                        <small>Stammkundschaft seit vielen Jahren</small>
+                      </div>
+                      <div class="hero-visual__chip">
+                        Showroom / Werkstattbesuch
+                        <small>nach Absprache oder fixen Zeiten</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-visual__stat-card">
+                    <div class="hero-visual__stat-label">Ziel</div>
+                    <div class="hero-visual__stat-value">10–20 Jahre</div>
+                    <div class="hero-visual__stat-footnote">
+                      Eine Website, die nicht jedes Jahr neu erfunden werden muss, sondern
+                      ruhig ihren Dienst tut.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- LEISTUNGEN -->
+        <section id="leistungen" class="section" aria-labelledby="leistungen-title">
+          <div class="container">
+            <header class="section__header">
+              <p class="section__eyebrow">Leistungen</p>
+              <h2 id="leistungen-title" class="section__title">
+                Vier Bereiche – genug, um ein umfassendes Angebot abzubilden.
+              </h2>
+              <p class="section__lead">
+                Im Klar Plus Paket bilden wir die Hauptleistungen strukturiert ab. Jeder
+                Bereich kann später eine eigene Unterseite bekommen, falls das sinnvoll wird.
+              </p>
+            </header>
+
+            <div class="leistungen-grid">
+              <!-- Innenausbau -->
+              <article class="card">
+                <div class="card__eyebrow">Innenausbau</div>
+                <h3 class="card__title">Einbauten &amp; Möbel im Bestand</h3>
+                <p class="card__body">
+                  Massgefertigte Möbel und Einbauten, die sich ruhig in bestehende Räume
+                  einfügen – für Wohnen, Arbeiten und öffentliche Bereiche.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Schränke, Regale, Bibliotheken, Sitzbänke, Garderoben
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Anpassung an Dachschrägen, Nischen und schwierige Grundrisse
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Oberfläche und Beschläge nach Nutzung und Budget gewählt
+                  </li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">Wohnungen</span>
+                  <span class="tag">Einfamilienhäuser</span>
+                  <span class="tag">Kleinbüros</span>
+                </div>
+              </article>
+
+              <!-- Umbau / Renovation -->
+              <article class="card">
+                <div class="card__eyebrow">Umbau &amp; Renovation</div>
+                <h3 class="card__title">Räume ruhig erneuern</h3>
+                <p class="card__body">
+                  Sanfte Eingriffe statt Komplettumbau, wo das sinnvoll ist: Küchen,
+                  Türen, Bodenbeläge und kleine Grundrisskorrekturen.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Küchenumgestaltung mit neuen Fronten und einzelnen Elementen
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Erneuerung von Türen, Zargen und Sichtschutz
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Koordination mit anderen Gewerken vor Ort
+                  </li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">Bewohnter Umbau</span>
+                  <span class="tag">Etappierung</span>
+                  <span class="tag">Koordination</span>
+                </div>
+              </article>
+
+              <!-- Reparaturen & Service -->
+              <article class="card">
+                <div class="card__eyebrow">Service</div>
+                <h3 class="card__title">Reparaturen &amp; Unterhalt</h3>
+                <p class="card__body">
+                  Regelmässiger Unterhalt und kleine Reparaturen sichern die Nutzung
+                  über viele Jahre. Vor allem bei Türen, Fenstern und Beschlägen wichtig.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Justierung und Reparatur von Türen, Schubladen, Scharnieren
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Austausch defekter Teile, wo möglich ohne Grossumbau
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Auf Wunsch Servicevertrag für regelmässige Kontrolle
+                  </li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">Stammkundschaft</span>
+                  <span class="tag">Liegenschaften</span>
+                  <span class="tag">Verwaltungen</span>
+                </div>
+              </article>
+
+              <!-- Zusatzleistungen -->
+              <article class="card">
+                <div class="card__eyebrow">Zusatz</div>
+                <h3 class="card__title">Planung &amp; Beratung</h3>
+                <p class="card__body">
+                  Für Bauherrschaften, Verwaltungen oder Architekten, die sich eine klare
+                  handwerkliche Sicht wünschen.
+                </p>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Unterstützung bei Materialwahl und Detailausbildung
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Mitdenken bei Terminplanung & Bauablauf
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Ruhige, verständliche Erklärungen auch für Nicht-Profis
+                  </li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">Architekten</span>
+                  <span class="tag">Bauherrschaften</span>
+                  <span class="tag">Verwaltungen</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJEKTE -->
+        <section id="projekte" class="section" aria-labelledby="projekte-title">
+          <div class="container">
+            <header class="section__header">
+              <p class="section__eyebrow">Projekte</p>
+              <h2 id="projekte-title" class="section__title">
+                Drei Beispiele, die den Charakter des Betriebs zeigen.
+              </h2>
+              <p class="section__lead">
+                Mehr als eine lange Bildliste hilft oft eine Auswahl typischer Projekte,
+                die zeigen, wie gearbeitet wird, worauf geachtet wird und wie das Ergebnis
+                im Alltag funktioniert.
+              </p>
+            </header>
+
+            <div class="projekt-list">
+              <!-- Projekt 1 -->
+              <article class="card">
+                <h3 class="card__title">Umbau Altbauwohnung</h3>
+                <p class="projekt-meta">
+                  Küche &amp; Einbauschränke in bestehender Wohnung · Privatkundschaft
+                </p>
+                <p class="card__body">
+                  Die bestehende Küche war eng und dunkel, Stauraum fehlte. Ziel war
+                  eine ruhigere Raumwirkung mit mehr Platz, ohne den Grundriss komplett
+                  zu verändern.
+                </p>
+                <ul class="card__list">
+                  <li><span class="card__list-bullet"></span>Neue Fronten, Arbeitsplatte, Stauraum in Nischen</li>
+                  <li><span class="card__list-bullet"></span>Einbauschrank im Eingangsbereich mit Garderobe</li>
+                  <li><span class="card__list-bullet"></span>Arbeiten in Etappen, damit die Wohnung bewohnbar blieb</li>
+                </ul>
+              </article>
+
+              <!-- Projekt 2 -->
+              <article class="card">
+                <h3 class="card__title">Showroom-Ecke in der Werkstatt</h3>
+                <p class="projekt-meta">
+                  Kleine Ausstellung · eigene Werkstatt · laufend erweiterbar
+                </p>
+                <p class="card__body">
+                  Statt eines grossen Showrooms wurde eine ruhige Ecke in der Werkstatt
+                  eingerichtet, in der Kundinnen und Kunden Materialien und Beschläge
+                  anschauen können.
+                </p>
+                <ul class="card__list">
+                  <li><span class="card__list-bullet"></span>3–4 Materialkombinationen, nicht 30</li>
+                  <li><span class="card__list-bullet"></span>Klar beschriftet mit Beispielprojekten</li>
+                  <li><span class="card__list-bullet"></span>Besuch nach Vereinbarung, in die Arbeit integrierbar</li>
+                </ul>
+              </article>
+
+              <!-- Projekt 3 -->
+              <article class="card">
+                <h3 class="card__title">Regelmässiger Service für Liegenschaft</h3>
+                <p class="projekt-meta">
+                  Mehrfamilienhaus, mehrere Wohnungen · Auftrag einer Verwaltung
+                </p>
+                <p class="card__body">
+                  Türen, Fenster und Einbauten sollen über Jahre zuverlässig funktionieren.
+                  Dafür wurde ein einfacher Service-Rhythmus vereinbart.
+                </p>
+                <ul class="card__list">
+                  <li><span class="card__list-bullet"></span>Jährliche Kontrolle der stark genutzten Bereiche</li>
+                  <li><span class="card__list-bullet"></span>Kleine Reparaturen direkt vor Ort erledigt</li>
+                  <li><span class="card__list-bullet"></span>Kurzprotokoll für Verwaltung mit Fotos nach Bedarf</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- TEAM & GESCHICHTE -->
+        <section id="team" class="section" aria-labelledby="team-title">
+          <div class="container">
+            <header class="section__header">
+              <p class="section__eyebrow">Team &amp; Geschichte</p>
+              <h2 id="team-title" class="section__title">
+                Wer hinter der Arbeit steht.
+              </h2>
+              <p class="section__lead">
+                Im Klar Plus Paket ist Platz für Menschen: wer plant, wer in der Werkstatt
+                arbeitet, wer auf der Baustelle den Überblick behält. Es reicht eine ruhige,
+                ehrliche Darstellung.
+              </p>
+            </header>
+
+            <div class="team-grid">
+              <article class="card">
+                <div class="team-card__name">Vorname Nachname</div>
+                <div class="team-card__role">Inhaber · Planung &amp; Koordination</div>
+                <p class="card__body">
+                  Verantwortlich für Offerten, Planung und Begleitung der Projekte. Erster
+                  Ansprechpartner bei neuen Anfragen.
+                </p>
+              </article>
+
+              <article class="card">
+                <div class="team-card__name">Vorname Nachname</div>
+                <div class="team-card__role">Werkstatt &amp; Montage</div>
+                <p class="card__body">
+                  Fertigung der Möbel und Einbauten, Vorbereitung der Montage, Einbau vor
+                  Ort beim Kunden.
+                </p>
+              </article>
+
+              <article class="card">
+                <div class="team-card__name">Vorname Nachname</div>
+                <div class="team-card__role">Lernende*r / Mitarbeit</div>
+                <p class="card__body">
+                  Unterstützung in Werkstatt und auf Baustellen, mit Fokus darauf, das
+                  Handwerk sauber zu lernen und weiterzugeben.
+                </p>
+              </article>
+            </div>
+
+            <div class="section section--tight">
+              <h3 class="section__title">Ein kurzer Blick zurück</h3>
+              <ul class="timeline" aria-label="Geschichte des Betriebs">
+                <li class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <h4>Gründung als Einmannbetrieb</h4>
+                  <p>
+                    Start als kleiner Betrieb mit Schwerpunkt Reparaturen und kleinere
+                    Schreinerarbeiten.
+                  </p>
+                </li>
+                <li class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <h4>Erweiterung um Innenausbau</h4>
+                  <p>
+                    Mit wachsender Nachfrage kamen Einbauten und Umbauten hinzu, teils mit
+                    Partnerbetrieben.
+                  </p>
+                </li>
+                <li class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <h4>Heute</h4>
+                  <p>
+                    Ein kleiner, eingespielter Betrieb mit Fokus auf ruhig geplante Projekte
+                    und langjährige Kundschaft.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ARBEITSWEISE -->
+        <section id="arbeitsweise" class="section" aria-labelledby="arbeitsweise-title">
+          <div class="container split-layout">
+            <div>
+              <header class="section__header">
+                <p class="section__eyebrow">Arbeitsweise</p>
+                <h2 id="arbeitsweise-title" class="section__title">
+                  Wie wir Projekte angehen – von der ersten Idee bis zur Übergabe.
+                </h2>
+                <p class="section__lead">
+                  Die Schritte sind bewusst übersichtlich gehalten. Auch grössere Vorhaben
+                  bleiben so verständlich.
+                </p>
+              </header>
+            </div>
+
+            <aside class="split-layout__sidebar">
+              <ol class="steps">
+                <li class="steps__item">
+                  <div class="steps__bullet"></div>
+                  <h3>1. Erstes Gespräch</h3>
+                  <p>
+                    Wir klären, worum es geht: Umbau, Einbau, Reparatur oder eine Mischung.
+                    Wenn möglich direkt mit Fotos oder Plänen.
+                  </p>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__bullet"></div>
+                  <h3>2. Vor-Ort-Termin &amp; Grobofferte</h3>
+                  <p>
+                    Masse nehmen, Nutzung verstehen, Budgetrahmen besprechen. Danach folgt
+                    eine grobe Kostenschätzung.
+                  </p>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__bullet"></div>
+                  <h3>3. Planung &amp; Detailofferte</h3>
+                  <p>
+                    Detailliertere Planung mit Materialwahl, Terminvorschlag und verbindlicher
+                    Offerte.
+                  </p>
+                </li>
+                <li class="steps__item">
+                  <div class="steps__bullet"></div>
+                  <h3>4. Ausführung &amp; Abschluss</h3>
+                  <p>
+                    Fertigung in der Werkstatt, Montage vor Ort. Zum Schluss eine ruhige
+                    Übergabe und klare Ansprechperson bei Fragen.
+                  </p>
+                </li>
+              </ol>
+            </aside>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section" aria-labelledby="faq-title">
+          <div class="container">
+            <header class="section__header">
+              <p class="section__eyebrow">Fragen</p>
+              <h2 id="faq-title" class="section__title">
+                Häufige Fragen, die wir auf solchen Seiten klären.
+              </h2>
+              <p class="section__lead">
+                Viele Unsicherheiten lassen sich mit wenigen Sätzen auf der Website
+                beruhigen. Die folgenden Fragen sind Beispiele, die Sie an Ihre Realität
+                anpassen können.
+              </p>
+            </header>
+
+            <div class="faq">
+              <div>
+                <div class="faq__item">
+                  <div class="faq__question">
+                    Machen Sie auch kleine Arbeiten?
+                  </div>
+                  <p>
+                    Ja, im Rahmen von Reparaturen und Unterhalt übernehmen wir auch kleine
+                    Arbeiten – z.&nbsp;B. eine klemmende Türe, eine defekte Schublade oder den
+                    Austausch einzelner Fronten. Es lohnt sich, kurz anzurufen.
+                  </p>
+                </div>
+
+                <div class="faq__item">
+                  <div class="faq__question">
+                    Arbeiten Sie nur für Privatkunden?
+                  </div>
+                  <p>
+                    Nein. Viele unserer Aufträge kommen von Verwaltungen, Architekten und
+                    kleinen Firmen. Die Seite kann das klar aufführen, damit sich die
+                    richtigen Personen angesprochen fühlen.
+                  </p>
+                </div>
+              </div>
+
+              <aside>
+                <div class="faq__item">
+                  <div class="faq__question">
+                    Wie weit fahren Sie für Projekte?
+                  </div>
+                  <p>
+                    Im Beispiel ist ein Einsatzradius von 20–30&nbsp;km rund um den
+                    Betriebsstandort sinnvoll. Dieser Bereich wird auf der Seite klar
+                    genannt, damit Erwartungen stimmen.
+                  </p>
+                </div>
+
+                <div class="faq__item">
+                  <div class="faq__question">
+                    Wie lange bleibt diese Website aktuell?
+                  </div>
+                  <p>
+                    Die Struktur ist darauf ausgelegt, 10–20 Jahre zu tragen. Änderungen
+                    betreffen vor allem Öffnungszeiten, Team und einzelne Leistungen – der
+                    Rahmen bleibt ruhig gleich.
+                  </p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- KONTAKT -->
+        <section id="kontakt" class="section" aria-labelledby="kontakt-title">
+          <div class="container split-layout">
+            <div>
+              <header class="section__header">
+                <p class="section__eyebrow">Kontakt</p>
+                <h2 id="kontakt-title" class="section__title">
+                  Kontaktbereich für eine Klar Plus Handwerksseite.
+                </h2>
+                <p class="section__lead">
+                  Hier werden später Ihre echten Daten stehen. Struktur und Formulierungen
+                  sind bereits so, dass sie für viele Betriebe passen.
+                </p>
+              </header>
+
+              <table class="table table--zeiten">
+                <thead>
+                  <tr>
+                    <th>Tag</th>
+                    <th>Werkstatt / Büro</th>
+                    <th>Telefonisch erreichbar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mo–Fr</td>
+                    <td>07:30–12:00 / 13:30–17:30</td>
+                    <td>08:00–12:00 / 14:00–17:00</td>
+                  </tr>
+                  <tr>
+                    <td>Sa</td>
+                    <td>nach Vereinbarung</td>
+                    <td>nach Vereinbarung</td>
+                  </tr>
+                  <tr>
+                    <td>So/Feiertage</td>
+                    <td colspan="2">geschlossen</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <aside class="split-layout__sidebar">
+              <div class="card">
+                <h3 class="card__title">Kontaktformular (Beispiel)</h3>
+                <form class="form" autocomplete="on">
+                  <div class="form__row">
+                    <div class="field">
+                      <label class="field__label" for="betrieb-name">Name / Firma</label>
+                      <input class="input" type="text" id="betrieb-name" name="betrieb-name" />
+                    </div>
+                    <div class="field">
+                      <label class="field__label" for="telefon">Telefon</label>
+                      <input class="input" type="tel" id="telefon" name="telefon" />
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="email">E-Mail</label>
+                    <input class="input" type="email" id="email" name="email" />
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="anliegen">
+                      Kurz beschrieben, worum es geht:
+                    </label>
+                    <textarea
+                      class="textarea"
+                      id="anliegen"
+                      name="anliegen"
+                      rows="4"
+                      placeholder="z.B. Umbau Küche, neue Einbauschränke, Service für Liegenschaft …"
+                    ></textarea>
+                    <p class="field__hint">
+                      In der echten Version geht diese Anfrage direkt an Ihre Mailadresse.
+                      Hier dient das Formular als strukturelles Beispiel.
+                    </p>
+                  </div>
+
+                  <button class="btn btn--primary" type="submit">
+                    Anfrage senden (Beispiel)
+                  </button>
+                </form>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../clear4-core.js" defer></script>
+    <script src="../clear4-price-890.js" defer></script>
+  </body>
+</html>
