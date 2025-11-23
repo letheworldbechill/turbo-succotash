@@ -2,37 +2,51 @@
 <html lang="de">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>sichtbarkeit-wahren.ch | Ruhige Webseiten für kleine Unternehmen</title>
-    <meta name="description" content="CLEAR-4: Ruhige, klare Webseiten für Handwerk, Landwirtschaft und Dienstleistungen in der Schweiz. Eine Basis, drei Branchen, drei Preisklassen." />
+    <meta
+      name="description"
+      content="CLEAR-4: Ruhige, klare Webseiten für kleine und mittlere Unternehmen in der Schweiz. Eine Basis, drei Preisklassen – gedacht, um 10–20 Jahre verständlich zu bleiben."
+    />
     <link rel="stylesheet" href="clear4-base.css" />
   </head>
-  <body class="clear4-landing">
+
+  <body class="clear4-landing" data-price-tier="klar-start">
     <a href="#hauptinhalt" class="skip-link">Direkt zum Inhalt</a>
 
     <div class="page-shell">
+      <!-- HEADER -->
       <header class="site-header">
         <div class="container site-header__inner">
           <div class="brand">
             <div class="brand__mark" aria-hidden="true"></div>
             <div class="brand__text">
               <div class="brand__title">sichtbarkeit-wahren.ch</div>
-              <div class="brand__subtitle">Webseiten für kleine Unternehmen</div>
+              <div class="brand__subtitle">
+                Ruhige Webseiten für kleine Unternehmen
+              </div>
             </div>
           </div>
+
           <nav class="nav" aria-label="Hauptnavigation">
             <div class="nav__primary">
-              <a href="#branchen" class="nav__link nav__link--active">Für wen</a>
+              <a href="#hero" class="nav__link nav__link--active">Start</a>
+              <a href="#warum" class="nav__link">Warum</a>
               <a href="#prinzip" class="nav__link">Prinzip</a>
-              <a href="#preise" class="nav__link">Preise</a>
+              <a href="#branchen" class="nav__link">Preisklassen</a>
               <a href="#kontakt" class="nav__link">Kontakt</a>
             </div>
           </nav>
         </div>
       </header>
 
+      <!-- MAIN -->
       <main id="hauptinhalt" class="site-main">
-        <section class="section hero">
+        <!-- HERO -->
+        <section id="hero" class="section hero">
           <div class="container hero__inner">
             <div>
               <p class="hero__kicker">Online sichtbar bleiben</p>
@@ -45,140 +59,233 @@
                 Kundinnen und Kunden Sie auch in zehn Jahren noch gut finden.
               </p>
               <div class="hero__actions">
-                <a href="#branchen" class="btn btn--primary">Branche auswählen</a>
-                <a href="#kontakt" class="btn btn--ghost">Unverbindlich anfragen</a>
+                <a href="#branchen" class="btn btn--primary">
+                  Preisklassen &amp; Beispiele
+                </a>
+                <a href="#kontakt" class="btn btn--ghost">
+                  Unverbindlich anfragen
+                </a>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="branchen" class="section">
-          <div class="container">
-            <header class="section__header">
-              <p class="section__eyebrow">Für wen</p>
-              <h2 class="section__title">Wählen Sie die Richtung, in der Sie arbeiten.</h2>
-              <p class="section__lead">
-                Jede Branche hat eine eigene Seite. Dort sind die drei Preisklassen (290 / 490 / 890)
-                mit Beispielen erklärt.
+              <p class="hero__note">
+                Ziel ist nicht ein ständig neues „Branding“, sondern eine verlässliche
+                Präsenz: sicher, lesbar und gut erreichbar – insbesondere für Familien
+                und ältere Menschen.
               </p>
-            </header>
-
-            <div class="card-grid">
-              <article class="card">
-                <div class="card__eyebrow">Handwerk</div>
-                <h3 class="card__title">Werkstatt &amp; Bau</h3>
-                <p class="card__body">
-                  Für Schreinerei, Malerei, Zimmerei, Metallbau, Elektro, Sanitär.
-                  Ruhige Darstellung von Leistungen, Team und Kontakt.
-                </p>
-                <a href="Pages/clear4-handwerk.html" class="btn btn--ghost">
-                  Zu den Handwerk-Seiten
-                </a>
-              </article>
-
-              <article class="card">
-                <div class="card__eyebrow">Landwirtschaft</div>
-                <h3 class="card__title">Hof &amp; Hofladen</h3>
-                <p class="card__body">
-                  Für Direktvermarktung, Hofläden, Gemüse-Abos, Fleischpakete, Ferien auf dem Bauernhof.
-                </p>
-                <a href="Pages/clear4-landwirtschaft.html" class="btn btn--ghost">
-                  Zu den Hof-Seiten
-                </a>
-              </article>
-
-              <article class="card">
-                <div class="card__eyebrow">Dienstleistung</div>
-                <h3 class="card__title">Büro &amp; Beratung</h3>
-                <p class="card__body">
-                  Für Beratung, Coaching, Treuhand, Kosmetik, Haushaltshilfe, Büroservices.
-                </p>
-                <a href="Pages/clear4-dienstleistung.html" class="btn btn--ghost">
-                  Zu den Dienstleistungs-Seiten
-                </a>
-              </article>
             </div>
           </div>
         </section>
 
+        <!-- WARUM -->
+        <section id="warum" class="section">
+          <div class="container split-layout">
+            <div>
+              <header class="section__header">
+                <p class="section__eyebrow">Warum</p>
+                <h2 class="section__title">
+                  Viele gute Betriebe verlieren online an Sichtbarkeit – ohne es zu merken.
+                </h2>
+                <p class="section__lead">
+                  Nicht, weil sie schlecht arbeiten. Sondern weil ihre Website technisch
+                  stehen geblieben ist: kein https, schlecht auf dem Handy, schwer zu pflegen.
+                </p>
+              </header>
+              <p>
+                Klar ist: Die Arbeit im Alltag geht vor. Es ist verständlich, dass eine
+                Website schnell einmal zehn Jahre einfach „läuft“. In dieser Zeit haben sich
+                aber Browser, Handys und Sicherheitsanforderungen stark verändert.
+              </p>
+              <p>
+                sichtbarkeit-wahren.ch ist dafür da, diese Lücke zu schliessen – leise,
+                respektvoll und ohne Druck. Eine ruhige Seite, die sich anfühlt, als wäre
+                sie schon immer da gewesen.
+              </p>
+            </div>
+
+            <aside class="split-layout__sidebar">
+              <div class="card">
+                <h3 class="card__title">Typische Ausgangslagen</h3>
+                <ul class="card__list">
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Website älter als 8–10 Jahre, nicht mehr aktualisiert
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Browser zeigt „nicht sicher“ oder lädt sehr langsam
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Auf dem Handy ist alles klein, unübersichtlich, schwer zu treffen
+                  </li>
+                  <li>
+                    <span class="card__list-bullet"></span>
+                    Neue Kundschaft bleibt aus, obwohl der Betrieb gut läuft
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- PRINZIP -->
         <section id="prinzip" class="section section--tight">
           <div class="container">
             <header class="section__header">
               <p class="section__eyebrow">Prinzip</p>
-              <h2 class="section__title">Eine Basis, drei Preisklassen, pro Branche angepasst.</h2>
+              <h2 class="section__title">
+                Eine Basis, drei Preisklassen – pro Branche ruhig angepasst.
+              </h2>
               <p class="section__lead">
-                Technisch gibt es nur eine Basis: <code>clear4-base.css</code> und <code>clear4-core.js</code>.
-                Alles andere – Farben, Besonderheiten je Branche und je Preisklasse – wird fein
-                darauf aufgesetzt.
-              </p>
-            </header>
-          </div>
-        </section>
-
-        <section id="preise" class="section">
-          <div class="container">
-            <header class="section__header">
-              <p class="section__eyebrow">Preise</p>
-              <h2 class="section__title">Drei Preisklassen – immer dieselbe Ruhe im Aufbau.</h2>
-              <p class="section__lead">
-                Die Details unterscheiden sich je Branche, die Logik bleibt gleich.
+                Technisch gibt es nur eine Basis: <code>clear4-base.css</code> und
+                <code>clear4-core.js</code>. Alles andere – Farben, Beispiele, Texte –
+                richtet sich nach Ihrem Betrieb.
               </p>
             </header>
 
             <div class="card-grid">
               <article class="card">
-                <div class="card__eyebrow">CHF&nbsp;290</div>
-                <h3 class="card__title">Klar Start</h3>
+                <div class="card__eyebrow">Kern</div>
+                <h3 class="card__title">CLEAR-4 Layout</h3>
                 <p class="card__body">
-                  Einfache Seite, die das Wichtigste zeigt: wer Sie sind, was Sie tun,
-                  wie man Sie erreicht.
+                  Ein ruhiges, nervensystem-freundliches Layout: klare Typografie,
+                  lesbare Abstände, keine hektischen Effekte. Es funktioniert gleich gut
+                  für Handwerk, Dienstleistungen und Landwirtschaft.
                 </p>
               </article>
+
               <article class="card">
-                <div class="card__eyebrow">CHF&nbsp;490</div>
-                <h3 class="card__title">Betrieb Klar</h3>
+                <div class="card__eyebrow">Anpassung</div>
+                <h3 class="card__title">Farben &amp; Beispiele</h3>
                 <p class="card__body">
-                  Mehr Platz für mehrere Leistungen oder Schwerpunkte.
+                  Jede Branche bekommt eine passende Farbwelt. Die Struktur bleibt
+                  dieselbe. So können Ihre Kundinnen und Kunden sich schnell zurechtfinden,
+                  ohne jedes Mal ein neues System lernen zu müssen.
                 </p>
               </article>
-              <article class="card card--premium">
-                <div class="card__eyebrow">CHF&nbsp;890</div>
-                <h3 class="card__title">Klar Plus</h3>
+
+              <article class="card">
+                <div class="card__eyebrow">Dauer</div>
+                <h3 class="card__title">10–20 Jahre mitlaufend</h3>
                 <p class="card__body">
-                  Für Betriebe mit mehreren Standbeinen, Team oder Kursen.
+                  Die Seite ist darauf ausgelegt, lange mitzuhalten. Inhalte lassen sich
+                  bei Bedarf anpassen, ohne das ganze System neu aufzubauen.
                 </p>
               </article>
             </div>
           </div>
         </section>
 
+        <!-- PREISKLASSEN / BEISPIELE -->
+        <section id="branchen" class="section">
+          <div class="container">
+            <header class="section__header">
+              <p class="section__eyebrow">Preisklassen</p>
+              <h2 class="section__title">Drei klare Klassen – je nach Situation.</h2>
+              <p class="section__lead">
+                Die Gestaltung ist für alle Branchen gleich ruhig. Der Unterschied liegt
+                im Umfang: Klar Start, Betrieb Klar oder Klar Plus. Die Beispiele unten
+                zeigen den Aufbau.
+              </p>
+            </header>
+
+            <div class="card-grid">
+              <article class="card">
+                <div class="card__eyebrow">Klar Start</div>
+                <h3 class="card__title">Für einfache, klare Präsenz</h3>
+                <p class="card__body">
+                  Eine Seite mit Leistungen, kurzer Vorstellung und Kontakt. Ideal für
+                  kleine Betriebe, die eine ruhige Visitenkarte im Netz brauchen.
+                </p>
+                <a href="pages/klar-start/index.html" class="btn btn--ghost">
+                  Beispiel Klar Start ansehen
+                </a>
+              </article>
+
+              <article class="card">
+                <div class="card__eyebrow">Betrieb Klar</div>
+                <h3 class="card__title">Für gewachsene Betriebe</h3>
+                <p class="card__body">
+                  Mehr Struktur für mehrere Leistungsbereiche und Beispiele. Gut für
+                  Betriebe, die seit Jahren bestehen und dies sichtbar machen möchten.
+                </p>
+                <a href="pages/betrieb-klar/index.html" class="btn btn--ghost">
+                  Beispiel Betrieb Klar ansehen
+                </a>
+              </article>
+
+              <article class="card">
+                <div class="card__eyebrow">Klar Plus</div>
+                <h3 class="card__title">Für mehrere Standbeine &amp; Team</h3>
+                <p class="card__body">
+                  Platz für Team, Geschichte, Projekte und zusätzliche Informationen –
+                  ohne den ruhigen Eindruck zu verlieren.
+                </p>
+                <a href="pages/klar-plus/index.html" class="btn btn--ghost">
+                  Beispiel Klar Plus ansehen
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- KONTAKT -->
         <section id="kontakt" class="section">
           <div class="container split-layout">
             <div>
               <header class="section__header">
                 <p class="section__eyebrow">Kontakt</p>
-                <h2 class="section__title">Einmal in Ruhe klären, ob es passt.</h2>
+                <h2 class="section__title">
+                  Wenn Sie das Gefühl haben: „Unsere Website ist dran.“
+                </h2>
                 <p class="section__lead">
-                  Ein Mail oder ein kurzer Anruf reicht, um die Situation zu verstehen und ein passendes Paket zu finden.
+                  Ein Link zur bestehenden Seite genügt. Ich melde mich mit einer
+                  ehrlichen Einschätzung und einem Vorschlag, welche Klasse sinnvoll ist.
                 </p>
               </header>
               <p>
-                E-Mail: <strong>hallo@sichtbarkeit-wahren.ch</strong>
+                Sie müssen nichts vorbereiten. Schreiben Sie einfach, wie Ihr Betrieb
+                heisst und wo Ihre aktuelle Website erreichbar ist – oder dass es noch
+                keine gibt.
               </p>
             </div>
+
             <aside class="split-layout__sidebar">
               <div class="card">
-                <p class="card__body">
-                  Diese Landing Page ist der Ausgangspunkt. Die eigentliche Arbeit passiert
-                  in den Branchen-Seiten im Unterordner <code>/Pages</code>.
-                </p>
-              </div>
-            </aside>
-          </div>
-        </section>
-      </main>
-    </div>
+                <h3 class="card__title">Kontaktanfrage (Beispiel)</h3>
+                <form class="form">
+                  <div class="field">
+                    <label class="field__label" for="betrieb">
+                      Name des Betriebs
+                    </label>
+                    <input
+                      id="betrieb"
+                      class="input"
+                      type="text"
+                      placeholder="z.B. Schreinerei Muster, Hof Muster, Praxis Muster"
+                    />
+                  </div>
 
-    <script src="clear4-core.js" defer></script>
-  </body>
-</html>
+                  <div class="field">
+                    <label class="field__label" for="webadresse">
+                      Aktuelle Webadresse (falls vorhanden)
+                    </label>
+                    <input
+                      id="webadresse"
+                      class="input"
+                      type="url"
+                      placeholder="https://www.beispielbetrieb.ch"
+                    />
+                    <p class="field__hint">
+                      Falls es keine Website gibt, kann dieses Feld leer bleiben.
+                    </p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="kontaktweg">
+                      Wie dürfen wir Sie erreichen?
+                    </label>
+                    <input
+                      id="kontaktweg"
+                      class="input"
+                      type="text"
+                      placeholder="Tel
